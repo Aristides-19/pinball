@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class FlipperController : MonoBehaviour
 {
-    public float restPosition = -50f; // Ángulo de reposo
-    public float pressedPosition = 0f; // Ángulo cuando está presionado
+    public float restPosition = -50f; // ï¿½ngulo de reposo
+    public float pressedPosition = 0f; // ï¿½ngulo cuando estï¿½ presionado
     public float hitStrength = 8000f; // Fuerza del motor al activar
     public float flipperDamper = 150f; // Fuerza del motor al volver a reposo
     public KeyCode flipperKey; // Tecla para activar
 
-    private HingeJoint2D hingeJoint;
+    private new HingeJoint2D hingeJoint;
     private JointMotor2D motor;
     private JointAngleLimits2D limits;
     private bool isPressed = false;
@@ -19,7 +19,7 @@ public class FlipperController : MonoBehaviour
         motor = hingeJoint.motor;
         limits = hingeJoint.limits;
 
-        // Configurar límites iniciales
+        // Configurar lï¿½mites iniciales
         limits.min = restPosition;
         limits.max = pressedPosition;
         hingeJoint.limits = limits;
@@ -42,7 +42,7 @@ public class FlipperController : MonoBehaviour
     {
         if (isPressed)
         {
-            // Activar palanca: alta velocidad y torque máximo
+            // Activar palanca: alta velocidad y torque mï¿½ximo
             motor.motorSpeed = -1000f; // Velocidad negativa para ir hacia pressedPosition
             motor.maxMotorTorque = hitStrength;
         }

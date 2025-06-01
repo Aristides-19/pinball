@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3709794885348941717}
   - component: {fileID: 3105172512408378419}
   m_Layer: 0
-  m_Name: 9-Sliced (2)
+  m_Name: Right Flipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
