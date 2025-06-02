@@ -382,6 +382,7 @@ MonoBehaviour:
   hitStrength: 10000
   flipperDamper: 150
   flipperKey: 97
+  leftFlipper: 1
 --- !u!1 &181266765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,14 +2712,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123101985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39032e505dec5e499007f68c6cd4b17, type: 3}
+  m_Script: {fileID: 11500000, guid: a48d28252df02544a925858aea65dfaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rPosition: 50
-  pPosition: 0
-  hStrength: 8000
-  fDamper: 150
+  restPosition: 50
+  pressedPosition: 0
+  hitStrength: 10000
+  flipperDamper: 150
   flipperKey: 100
+  leftFlipper: 0
 --- !u!1 &2138386773
 GameObject:
   m_ObjectHideFlags: 0

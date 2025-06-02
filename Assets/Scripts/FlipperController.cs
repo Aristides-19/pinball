@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FlipperController : MonoBehaviour
@@ -7,6 +8,7 @@ public class FlipperController : MonoBehaviour
     public float hitStrength = 8000f; // Fuerza del motor al activar
     public float flipperDamper = 150f; // Fuerza del motor al volver a reposo
     public KeyCode flipperKey; // Tecla para activar
+    public bool leftFlipper; // Nombre del flipper
 
     private new HingeJoint2D hingeJoint;
     private JointMotor2D motor;
@@ -43,13 +45,13 @@ public class FlipperController : MonoBehaviour
         if (isPressed)
         {
             // Activar palanca: alta velocidad y torque m�ximo
-            motor.motorSpeed = -1000f; // Velocidad negativa para ir hacia pressedPosition
+            motor.motorSpeed = (leftFlipper) ? -1000f : 1000f;
             motor.maxMotorTorque = hitStrength;
         }
         else
         {
             // Volver a reposo: velocidad positiva y torque reducido
-            motor.motorSpeed = 1000f;
+            motor.motorSpeed = (leftFlipper) ? 1000f : -1000f;
             motor.maxMotorTorque = flipperDamper;
         }
 
