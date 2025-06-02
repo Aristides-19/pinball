@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pinball.unity
     guid: eaab982dcc41e314b92db020d1520caf
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 2ceeea094e716bb40828d24dc6127d7b
   m_configObjects: {}
